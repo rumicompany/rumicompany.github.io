@@ -153,6 +153,33 @@
     </select>
 </footer>
 
+<style>
+    footer {
+        background-color: #222;
+        color: #aaa;
+        text-align: center;
+        padding: 40px 20px;
+        font-size: 1em;
+        animation: fadeIn 2s ease-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Aralarındaki boşluk */
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    footer select {
+        background-color: #444;
+        color: #fff;
+        padding: 5px;
+        border: none;
+    }
+</style>
+
+
 <script>
     function changeLanguage(select) {
         const language = select.value;
