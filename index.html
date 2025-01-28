@@ -12,56 +12,72 @@
             font-family: 'Arial', sans-serif;
             background-color: #111;
             color: white;
+            overflow-x: hidden;
         }
-        
+
+        /* Global Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
         /* Header Styling */
         header {
             background-color: #FFCC00;
-            padding: 20px;
+            padding: 60px 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-out;
         }
+
         header h1 {
             margin: 0;
-            font-size: 3em;
+            font-size: 3.5em;
             color: #111;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
+
         header p {
-            font-size: 1.2em;
+            font-size: 1.3em;
             color: #111;
             margin-top: 10px;
+            font-style: italic;
         }
 
         /* Section Styling */
         section {
-            padding: 50px 20px;
+            padding: 80px 20px;
             text-align: center;
+            animation: slideIn 1.5s ease-out;
         }
+
         section h2 {
             font-size: 2.5em;
             color: #FFCC00;
-        }
-        section p {
-            font-size: 1.1em;
-            color: #ccc;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 20px auto;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
         }
 
-        /* Button Styling */
-        .cta {
-            background-color: #FFCC00;
-            color: #111;
-            padding: 15px 30px;
-            text-decoration: none;
+        section p {
             font-size: 1.2em;
-            border-radius: 50px;
-            transition: background-color 0.3s;
-            margin-top: 20px;
+            color: #ccc;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 20px auto;
+            font-weight: 300;
         }
-        .cta:hover {
-            background-color: #E6B800;
+
+        section .highlight {
+            color: #FFCC00;
+            font-weight: bold;
         }
 
         /* Footer Styling */
@@ -69,8 +85,19 @@
             background-color: #222;
             color: #aaa;
             text-align: center;
-            padding: 20px 0;
+            padding: 40px 20px;
             font-size: 1em;
+            animation: fadeIn 2s ease-out;
+        }
+
+        footer a {
+            color: #FFCC00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         /* Responsive Design */
@@ -81,9 +108,8 @@
             section h2 {
                 font-size: 2em;
             }
-            .cta {
-                font-size: 1em;
-                padding: 12px 25px;
+            section p {
+                font-size: 1.1em;
             }
         }
     </style>
@@ -92,17 +118,26 @@
 
 <header>
     <h1>Welcome to Rumi Company</h1>
-    <p>Innovating the future of technology and business</p>
+    <p>Innovating the future of technology, aviation, and business</p>
 </header>
 
 <section>
-    <h2>We're just getting started!</h2>
-    <p>At Rumi Company, we're on a mission to bring cutting-edge solutions to various industries, including AI, technology, and aviation. We believe in pushing boundaries and building a brighter, more connected future.</p>
-    <a href="#" class="cta">Discover More</a>
+    <h2>Transforming Tomorrow</h2>
+    <p>At <span class="highlight">Rumi Company</span>, we are driven by the idea that the future of technology is limitless. With the advent of AI, automation, and the exploration of new frontiers like space and aviation, we are committed to bringing groundbreaking solutions that will reshape industries.</p>
+
+    <p>Our mission is clear: <span class="highlight">to be the catalyst for change</span>, blending human creativity with cutting-edge technology to bring smarter, more efficient systems into the world. From sustainable solutions to advanced AI algorithms, Rumi Company is pushing the boundaries of what's possible.</p>
+
+    <h2>Our Vision: A World Connected by Innovation</h2>
+    <p>We envision a world where technology enhances the way we live, work, and interact. From the moment we wake up to the moment we go to bed, technology is seamlessly integrated into our daily lives. At Rumi Company, we are creating the tools and platforms that will make that vision a reality.</p>
+
+    <p>As we embark on this journey, we are committed to not only revolutionizing technology but also promoting sustainability, ethics, and social responsibility. Our innovations aim to benefit individuals, communities, and industries globally, making the world a better place for all.</p>
+
+    <h2>Join Us on Our Journey</h2>
+    <p>We are just getting started, and we invite you to join us. Whether you're an investor, a developer, or someone passionate about the future, Rumi Company is the place where innovation, creativity, and ambition come together to create a better tomorrow.</p>
 </section>
 
 <footer>
-    <p>&copy; 2025 Rumi Company. All Rights Reserved.</p>
+    <p>&copy; 2025 <span class="highlight">Rumi Company</span>. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
 </footer>
 
 </body>
