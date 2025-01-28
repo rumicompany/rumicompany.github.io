@@ -100,6 +100,14 @@
             text-decoration: underline;
         }
 
+        footer select {
+            background-color: #444;
+            color: #fff;
+            padding: 5px;
+            border: none;
+            margin-top: 10px;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
@@ -131,12 +139,40 @@
     <p>We envision a world where technology enhances the way we live, work, and interact. From the moment we wake up to the moment we go to bed, technology is seamlessly integrated into our daily lives. At Rumi Company, we are creating the tools and platforms that will make that vision a reality.</p>
 
     <p>As we embark on this journey, we are committed to not only revolutionizing technology but also promoting sustainability, ethics, and social responsibility. Our innovations aim to benefit individuals, communities, and industries globally, making the world a better place for all.</p>
+    
+    <br>
 
-    <h2><p class="slogan">"Science Leads the Way"</p></h2>
+    <p class="highlight">"Science Leads the Way"</p>
 
 <footer>
-    <p>&copy; 2025 <span class="highlight">Rumi Company</span>. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+    <p>&copy; 2025 <span class="highlight">Rumi Company</span>. All Rights Reserved.</p>
+    <!-- Language Selector -->
+    <select onchange="changeLanguage(this)">
+        <option value="en">English</option>
+        <option value="tr">Türkçe</option>
+    </select>
 </footer>
+
+<script>
+    function changeLanguage(select) {
+        const language = select.value;
+        if (language === 'tr') {
+            document.querySelector('header h1').textContent = 'Rumi Company\'ye Hoşgeldiniz';
+            document.querySelector('header p').textContent = 'Teknoloji, havacılık ve iş dünyasının geleceğini yenilikçi bir şekilde şekillendiriyoruz';
+            document.querySelector('section h2').textContent = 'Yarını Şekillendiriyoruz';
+            document.querySelector('section p').textContent = 'Rumi Company olarak, teknolojinin geleceğinin sınırsız olduğuna inanıyoruz. Yapay zeka, otomasyon ve uzay gibi yeni sınırların keşfiyle, endüstrileri yeniden şekillendirecek çığır açan çözümler sunmaya kararlıyız.';
+            document.querySelector('section h2 + p').textContent = 'Misyonumuz net: değişim için bir katalizör olmak, insan yaratıcılığını en son teknolojiyle birleştirerek daha akıllı, daha verimli sistemler dünyaya kazandırmak. Sürdürülebilir çözümlerden gelişmiş yapay zeka algoritmalarına kadar, Rumi Company, mümkün olan sınırları zorluyor.';
+            document.querySelector('footer p').innerHTML = '&copy; 2025 <span class="highlight">Rumi Company</span>. Tüm Hakları Saklıdır.';
+        } else {
+            document.querySelector('header h1').textContent = 'Welcome to Rumi Company';
+            document.querySelector('header p').textContent = 'Innovating the future of technology, aviation, and business';
+            document.querySelector('section h2').textContent = 'Transforming Tomorrow';
+            document.querySelector('section p').textContent = 'At Rumi Company, we are driven by the idea that the future of technology is limitless. With the advent of AI, automation, and the exploration of new frontiers like space and aviation, we are committed to bringing groundbreaking solutions that will reshape industries.';
+            document.querySelector('section h2 + p').textContent = 'Our mission is clear: to be the catalyst for change, blending human creativity with cutting-edge technology to bring smarter, more efficient systems into the world. From sustainable solutions to advanced AI algorithms, Rumi Company is pushing the boundaries of what\'s possible.';
+            document.querySelector('footer p').innerHTML = '&copy; 2025 <span class="highlight">Rumi Company</span>. All Rights Reserved.';
+        }
+    }
+</script>
 
 </body>
 </html>
