@@ -7,34 +7,84 @@
     <title>Welcome to Rumi Company</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: white;
+        }
+        
+        /* Header Styling */
+        header {
+            background-color: #FFCC00;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #111;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #111;
+            margin-top: 10px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 50px 20px;
             text-align: center;
         }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
+        section h2 {
+            font-size: 2.5em;
+            color: #FFCC00;
         }
-        h1 {
-            margin: 0;
+        section p {
+            font-size: 1.1em;
+            color: #ccc;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 20px auto;
         }
-        section {
-            padding: 40px 20px;
-        }
+
+        /* Button Styling */
         .cta {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #0066cc;
-            color: white;
+            background-color: #FFCC00;
+            color: #111;
+            padding: 15px 30px;
             text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
         }
         .cta:hover {
-            background-color: #004b8d;
+            background-color: #E6B800;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            section h2 {
+                font-size: 2em;
+            }
+            .cta {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
         }
     </style>
 </head>
@@ -42,19 +92,17 @@
 
 <header>
     <h1>Welcome to Rumi Company</h1>
-    <p>Innovating the future of technology and business.</p>
+    <p>Innovating the future of technology and business</p>
 </header>
 
 <section>
     <h2>We're just getting started!</h2>
-    <p>Rumi Company is on its way to becoming a major player in various industries, including technology, AI, aviation, and much more.</p>
-    <p>Stay tuned for exciting updates, products, and innovations!</p>
-
-    <a href="#" class="cta">Learn More</a>
+    <p>At Rumi Company, we're on a mission to bring cutting-edge solutions to various industries, including AI, technology, and aviation. We believe in pushing boundaries and building a brighter, more connected future.</p>
+    <a href="#" class="cta">Discover More</a>
 </section>
 
 <footer>
-    <p>&copy; 2025 Rumi Company | All rights reserved.</p>
+    <p>&copy; 2025 Rumi Company. All Rights Reserved.</p>
 </footer>
 
 </body>
